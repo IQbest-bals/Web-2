@@ -1,0 +1,53 @@
+Jawaban
+
+1. Apa itu dokumen root?
+Dokumen root tuh kayak folder utama di server web yang nyimpen semua file website biar bisa diakses lewat browser. Misalnya, kalo kita buka http://localhost/index.html, file index.html ini harus ada di dokumen root biar bisa dibuka.
+
+2. Di Apache Web Server, dokumen root harus di C:\xampp\htdocs nggak?
+Nggak harus sih, tapi kalo pake XAMPP, default-nya emang ada di situ. Tapi kita bisa pindahin ke folder lain dengan edit file httpd.conf. Caranya:
+
+Buka file httpd.conf (di C:\xampp\apache\conf\httpd.conf)
+
+Cari ini:
+
+DocumentRoot "C:/xampp/htdocs"
+<Directory "C:/xampp/htdocs">
+
+Ganti jadi misalnya:
+
+DocumentRoot "D:/web_project"
+<Directory "D:/web_project">
+
+Abis itu restart Apache biar settingannya berubah.
+
+
+Jadi, bisa dipindahin ke mana aja asal diatur ulang di konfigurasinya.
+
+3. Perintah Git dan fungsinya
+
+git init → Bikin repository Git baru di folder proyek.
+
+git clone <URL> → Download repository dari GitHub/GitLab ke laptop/PC.
+
+git remote → Buat ngecek atau atur URL repository yang ada di server.
+
+git add <file> → Nge-list file yang mau di-save ke Git.
+
+git commit -m "pesan" → Simpen perubahan ke dalam repository lokal, biar ada history-nya.
+
+git push origin <branch> → Kirim perubahan dari laptop ke repository di GitHub/GitLab.
+
+git checkout <branch> → Pindah ke branch lain di repository.
+
+4. Perbedaan GitHub vs GitLab
+
+Singkatnya, GitHub lebih populer buat proyek open-source, sedangkan GitLab lebih cocok buat tim yang butuh fitur otomatisasi (CI/CD) bawaan.
+
+5. Bedanya Variable User sama Variable System?
+
+Variable User → Berlaku buat satu user doang di komputer itu. Kalo ada beberapa user, settingannya bisa beda.
+
+Variable System → Berlaku buat semua user di komputer itu.
+
+
+Misalnya, di Variable System ada PATH buat ngejalanin program tertentu yang semua user bisa akses. Sedangkan di Variable User, bisa ada TEMP folder yang beda-beda tiap user.
